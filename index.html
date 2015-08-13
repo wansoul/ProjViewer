@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>ProjViewer</title>
+    <script src="libs/svg-pan-zoom.js"></script>
+    <script src="libs/hammer.js"></script>
+    <script src="js/main.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+  </head>
+
+  <body>
+    <h1 class="titulo no-select">Loteamento</h1>
+    <object id="projeto-svg" type="image/svg+xml" data="loteamento.svg" style="width: 100%; height: 100%; overflow: visible;">Your browser does not support SVG</object>
+    <div class="controls">
+      <button id="zoom-reset" title="Resetar zoom"> x </button>
+      <button id="zoom-in" title="Mais zoom"> + </button>
+      <button id="zoom-out" title="Menos zoom"> - </button>
+    </div>
+    <div class="output" style="display: none">
+      <h4 onclick="load()">Output:</h4>
+      <p id="output-text">...</p>
+    </div>
+  </body>
+
+</html>

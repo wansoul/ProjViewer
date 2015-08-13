@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+	background-color: black;
+}
+
+
+/*################################
+HEADERS E TEXTOS
+################################*/
+h1.titulo{
+	font-weight: normal;
+	font-size: 20px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: rgba(255,255,255,0.7);
+	padding: 10px 30px;
+	margin: 0;
+	border-radius: 4px;
+}
+
+
+/*################################
+CONTROLES DE ZOOM
+################################*/
+div.controls{
+	position: absolute;
+	bottom: 10px; right: 10px;
+	padding: 0;
+}
+
+div.controls > button{
+	width: 36px;
+	height: 36px;
+	border-radius: 20%;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	background-color: rgba(255,255,255,0.70);
+	color: rgba(0,0,0,0);
+	background: rgba(255,255,255,0.70) center center no-repeat;
+	background-size: 20px 20px;
+}
+
+#zoom-reset{
+	margin-bottom: 6px;
+	background-image: url(../img/zoom-reset.svg);
+}
+
+#zoom-in{
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	background-image: url(../img/zoom-in.svg);
+}
+
+#zoom-out{
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	background-image: url(../img/zoom-out.svg);
+}
+
+
+/*################################
+MEDIA QUERIES
+################################*/
+@media (max-width: 767px) {
+	div.controls > button{
+		width: 42px;
+		height: 42px;
+		background-size: 26px 26px;
+		float: left;
+	}
+
+	#zoom-reset{
+		margin-right: 6px;
+	}
+
+	#zoom-in{
+		border-radius: 20%;
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#zoom-out{
+		border-radius: 20%;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+}
+
+
+/*################################
+UTILS
+################################*/
+.no-select{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.output{color: #ccc;}
